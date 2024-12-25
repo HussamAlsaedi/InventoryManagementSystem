@@ -25,5 +25,5 @@ public class Supplier {
     private String supplierName;
 
     @OneToOne(mappedBy = "supplier", cascade = CascadeType.ALL)
-     private Profile profile;
+     private MyUser myUser;
 }

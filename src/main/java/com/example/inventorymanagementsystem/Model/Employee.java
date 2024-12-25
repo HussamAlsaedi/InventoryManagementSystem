@@ -1,6 +1,5 @@
 package com.example.inventorymanagementsystem.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -8,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Set;
 
 @Setter
 @Getter
@@ -29,5 +26,5 @@ public class Employee {
     private String employeeName;
 
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL)
-    private Profile profile;
+    private MyUser myUser;
 }
